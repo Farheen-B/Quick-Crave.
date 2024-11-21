@@ -1,0 +1,327 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fdf5e6; /* Light Cream */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffb300; /* Bright Yellow */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure the header wraps on small screens */
+}
+
+.logo {
+    font-size: 3.5rem; /* Keep this size consistent */
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg,  #fa0b02 ,#a74106); /* Gradient from red to yellow */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px; /* Padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+/* Add a hover effect to the logo text */
+.logo:hover {
+    transform: rotate(2deg) scale(1.1); /* Bend the text in the opposite direction on hover */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow menu items to wrap on smaller screens */
+}
+
+header nav ul li {
+    display: inline;
+}
+
+/* Style and hover effect for navigation links */
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: #d32f2f; /* Red hover color */
+}
+
+.hero {
+    background-color: #ffb300; /* Bright Yellow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    color: white;
+    flex-wrap: wrap; /* Ensure the hero content wraps on smaller screens */
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 7rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-bar {
+    display: flex;
+    gap: 1rem;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    width: 200px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 0.5rem 1rem;
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-bar button:hover {
+    background-color: #d32f2f;
+}
+
+.hero-image {
+    width: 40%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-preview {
+    text-align: center;
+    padding: 2rem;
+}
+
+.menu-preview h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.food-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.food-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.food-item:hover {
+    transform: scale(1.05);
+}
+
+.food-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.food-item h4 {
+    margin-top: 1rem;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 5rem;
+    }
+    
+    .hero-content {
+        max-width: 60%;
+    }
+
+    .hero-image {
+        width: 50%; /* Adjust image size for tablet screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 4rem; /* Smaller heading for mobile */
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .menu-preview h2 {
+        font-size: 2rem;
+    }
+
+    .food-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .search-bar input {
+        width: 100%; /* Full width input for small screens */
+    }
+
+    .search-bar button {
+        width: 100%; /* Full width button for small screens */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center;
+        gap: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        max-width: 200px; /* Smaller image for small screens */
+    }
+
+    .food-item {
+        width: 100%; /* Full width food items for small screens */
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #181818;
+    color: #f5f5f5;
+}
+
+body.dark-mode header {
+    background-color: #333;
+}
+
+body.dark-mode .logo {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.dark-mode .hero {
+    background-color: #333;
+}
+
+body.dark-mode .food-item {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+}
+
+.dark-mode-toggle {
+    background-color: #f5f5f5;
+    border: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #ccc;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: #555;
+}
+.customize-form {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.customize-form label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.customize-form select,
+.customize-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.customize-form button {
+    padding: 0.5rem 1rem;
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.customize-form button:hover {
+    background-color: #d32f2f;
+}

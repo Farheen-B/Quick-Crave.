@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Are you starving? - Quick Crave</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Quick Crave</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button> <!-- Dark mode toggle button -->
+    </header>
+    
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Are you starving?</h1>
+            <p>Order your favorite meals and have them delivered to your door!</p>
+            <form class="search-bar">
+                <input type="text" placeholder="Enter your location">
+                <button type="submit">Find Food</button>
+            </form>
+        </div>
+        <img src="ramen.png" alt="Delicious Ramen" class="hero-image">
+    </section>
+
+    <section class="menu-preview">
+        <h2>Popular Dishes</h2>
+        <div class="food-gallery">
+            <div class="food-item">
+                <img src="dosa.png" alt="Spicy Dosa">
+                <h4>Spicy Dosa</h4>
+                <!-- Customization Form -->
+                <form class="customize-form">
+                    <label for="spicy-level">Spicy Level:</label>
+                    <select id="spicy-level" name="spicyLevel">
+                        <option value="mild">Mild</option>
+                        <option value="medium">Medium</option>
+                        <option value="spicy">Spicy</option>
+                    </select>
+    
+                    <label>Add-ons:</label><br>
+                    <input type="checkbox" id="extraCheese" name="extraCheese">
+                    <label for="extraCheese">Extra Cheese</label><br>
+    
+                    <input type="checkbox" id="noOnions" name="noOnions">
+                    <label for="noOnions">No Onions</label><br>
+    
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+    
+            <div class="food-item">
+                <img src="salad.png" alt="Fresh Salad">
+                <h4>Fresh Salad</h4>
+                <!-- Customization Form -->
+                <form class="customize-form">
+                    <label for="dressing">Salad Dressing:</label>
+                    <select id="dressing" name="dressing">
+                        <option value="ranch">Ranch</option>
+                        <option value="vinaigrette">Vinaigrette</option>
+                        <option value="caesar">Caesar</option>
+                    </select>
+    
+                    <label>Add-ons:</label><br>
+                    <input type="checkbox" id="extraCroutons" name="extraCroutons">
+                    <label for="extraCroutons">Extra Croutons</label><br>
+    
+                    <input type="checkbox" id="noTomatoes" name="noTomatoes">
+                    <label for="noTomatoes">No Tomatoes</label><br>
+    
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+    
+            <!-- Add more food items similarly -->
+        </div>
+    </section>
+    
+
+    <footer>
+        <p> 2024 Quick Crave | Fast Food Delivery </p>
+    </footer>
+    <script src="script1.js"></script>
+</body>
+</html>
